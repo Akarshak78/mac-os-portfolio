@@ -1,0 +1,139 @@
+.dock {
+    display: flex;
+    gap: 0.8rem;
+
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: .85rem 1.1rem;
+
+    border-radius: 18px;
+
+    background: rgba(255,255,255,.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255,255,255,.18);
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.35),
+        inset 0 1px rgba(255,255,255,.25);
+
+    .icon {
+
+        position: relative;
+
+        width: 60px;
+        aspect-ratio: 1;
+
+        border-radius: 14px;
+
+        display:flex;
+        justify-content:center;
+        align-items:center;
+
+        cursor:pointer;
+
+        transition:
+            transform .22s cubic-bezier(.22,1,.36,1),
+            box-shadow .22s,
+            filter .22s;
+
+    }
+
+    .icon img{
+        width:70%;
+        height:70%;
+        object-fit:contain;
+
+        pointer-events:none;
+    }
+
+    .github,
+    .cli {
+        background:black;
+    }
+
+    .note {
+        background:linear-gradient(to bottom,#ffb357,#ff991c);
+    }
+
+    .pdf {
+        background:linear-gradient(to bottom,#ff414e,#ff1928);
+    }
+
+    .calender,
+    .mail {
+        background:linear-gradient(to bottom,#695eff,#4234ff);
+    }
+
+    .spotify {
+        background:linear-gradient(to bottom,#4eb021,#358e0c);
+    }
+
+    .link {
+        background:linear-gradient(to bottom,#a361aa,#8e219a);
+    }
+
+    .icon:hover{
+
+        transform:
+            translateY(-18px)
+            scale(1.28);
+
+        filter:brightness(1.08);
+
+        box-shadow:
+            0 14px 28px rgba(0,0,0,.35);
+    }
+
+    .icon:hover + .icon,
+    .icon:has(+ .icon:hover){
+
+        transform:
+            translateY(-10px)
+            scale(1.12);
+
+    }
+
+    .icon::after{
+
+        content:"";
+
+        position:absolute;
+
+        bottom:-14px;
+        left:50%;
+
+        width:42px;
+        height:10px;
+
+        transform:
+            translateX(-50%)
+            scale(.8);
+
+        background:rgba(0,0,0,.25);
+
+        border-radius:50%;
+
+        filter:blur(8px);
+
+        opacity:0;
+
+        transition:.22s;
+
+    }
+
+    .icon:hover::after{
+
+        opacity:1;
+
+        transform:
+            translateX(-50%)
+            scale(1);
+
+    }
+
+}
