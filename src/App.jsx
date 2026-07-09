@@ -1,5 +1,5 @@
 import { useWindows } from "./context/WindowContext";
-import "./app.scss";
+import "./App.scss";
 
 import Dock from "./components/Dock";
 import Nav from "./components/Nav";
