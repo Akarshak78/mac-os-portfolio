@@ -38,7 +38,8 @@ A modern **macOS-inspired portfolio** built with **React.js**, recreating the ma
 
 ## 📸 Screenshots
 
-> Screenshots coming soon.
+<img width="1917" height="857" alt="image" src="https://github.com/user-attachments/assets/59289f4b-4e30-4bbe-91da-9f3e2db924db" />
+
 
 ---
 
